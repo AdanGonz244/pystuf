@@ -1,10 +1,13 @@
 import random
 
-stateT = 'true'
-stateF = 'false'
-randomer = range(int(10))
+minimum = 1
+largest = 10
+minlarg = random.randint(minimum, largest)
 
-probably = int(input('A number of choice 1-10:'))
-
-def dice():
-    
+def test():
+    choose = int(input('enter number 1-10: '))
+    if choose > 10:
+        print('no too high')
+        return test()
+    elif choose < 1:
+        print('y would u go less than 1?')
